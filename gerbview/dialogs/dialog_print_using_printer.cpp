@@ -280,7 +280,7 @@ void DIALOG_PRINT_USING_PRINTER::SetPrintParameters()
 
     // Due to negative objects in gerber objects, always use one page per image,
     // because these objects create artefact when they are printed on an existing image.
-    s_Parameters.m_OptionPrintPage = false;
+    s_Parameters.m_OptionPrintPage = m_Print_Overlay->GetValue();
 
     SetLayerSetFromListSelection();
 

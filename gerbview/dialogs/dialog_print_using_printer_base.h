@@ -51,6 +51,7 @@ class DIALOG_PRINT_USING_PRINTER_BASE : public DIALOG_SHIM
 		wxStaticText* m_FineAdjustYscaleTitle;
 		wxTextCtrl* m_FineAdjustYscaleOpt;
 		wxCheckBox* m_Print_Mirror;
+		wxCheckBox* m_Print_Overlay;
 		wxRadioBox* m_ModeColorOption;
 		wxButton* m_buttonOption;
 		wxButton* m_buttonPreview;

@@ -75,8 +75,9 @@ DIALOG_PRINT_USING_PRINTER_BASE::DIALOG_PRINT_USING_PRINTER_BASE( wxWindow* pare
 	sbOptionsSizer = new wxStaticBoxSizer( new wxStaticBox( this, wxID_ANY, _("Options:") ), wxVERTICAL );
 	
 	m_Print_Mirror = new wxCheckBox( sbOptionsSizer->GetStaticBox(), wxID_ANY, _("Mirror"), wxDefaultPosition, wxDefaultSize, 0 );
+	m_Print_Overlay = new wxCheckBox( sbOptionsSizer->GetStaticBox(), wxID_ANY, _("Overlay"), wxDefaultPosition, wxDefaultSize, 0 );
 	sbOptionsSizer->Add( m_Print_Mirror, 0, wxALL, 5 );
-	
+	sbOptionsSizer->Add( m_Print_Overlay, 0, wxALL, 5 );
 	
 	bmiddleRightSizer->Add( sbOptionsSizer, 0, wxEXPAND|wxALL, 5 );
 	

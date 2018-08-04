@@ -74,7 +74,17 @@ void GERBVIEW_FRAME::PrintPage( wxDC* aDC, LSET aPrintMasklayer,
     // In Gerbview, only one graphic layer is printed by page.
     // So we temporary set the graphic layer list to print with only one layer id
     GetGerberLayout()->ClearPrintableLayers();
-    GetGerberLayout()->AddLayerToPrintableList( graphiclayer );
+    if(printParameters->m_OptionPrintPage)
+    {
+        for(unsigned int i=0; i<printList.size(); i++)
+        {
+            GetGerberLayout()->AddLayerToPrintableList(i);
+        }
+    }
+    else
+    {
+        GetGerberLayout()->AddLayerToPrintableList( graphiclayer );
+    }
     m_canvas->SetPrintMirrored( aPrintMirrorMode );
 
     GetGerberLayout()->Draw( m_canvas, aDC, (GR_DRAWMODE) 0,
